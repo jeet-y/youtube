@@ -11,7 +11,7 @@ const VideoCard = ({ info }) => {
     // console.log(`uploadedFor   ${uploadedFor}`)
 
     return (
-        <div className='w-1/5 p-2 mt-6 cursor-pointer' >
+        <div>
             <img src={thumbnails.medium.url} className="w-full rounded-xl object-cover" alt="video" />
             <div className='flex mt-4'>
                 <img className='w-9 h-9 object-cover rounded-full' src={thumbnails.medium.url} alt='video icon' />
@@ -21,7 +21,7 @@ const VideoCard = ({ info }) => {
                     <p className='font-normal text-sm text-gray-300'>{views} views  </p>
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 

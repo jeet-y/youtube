@@ -1,12 +1,16 @@
 import React from 'react'
-import MainContainer from './MainContainer'
+import Head from './Head'
 import SideBar from './SideBar'
+import { Outlet } from 'react-router-dom'
 
 function Body() {
     return (
-        <div className='flex overflow-y-hidden'>
-            <SideBar />
-            <MainContainer />
+        <div>
+            <Head />
+            <div className='flex bg-[#212121]'>
+                <SideBar />
+                <Outlet />
+            </div>
         </div>
     )
 }
