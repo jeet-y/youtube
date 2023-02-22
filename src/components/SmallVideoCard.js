@@ -8,7 +8,7 @@ const SmallVideoCard = ({ info }) => {
     const views = useIntToString(viewsVal);
     return (
         <div className='mt-2 flex h-24'>
-            <img src={thumbnails.medium.url} className="w-52 rounded object-cover" alt="video" />
+            <img src={thumbnails.medium.url} className="w-52 rounded-lg object-cover" alt="video" />
             <div className='text-white font-bold w-full ml-2'>
                 <p className='overflow-clip overflow-ellipsis text-sm h-10'>{title}</p>
                 <p className='font-normal text-sm text-gray-300'>{channelTitle}</p>

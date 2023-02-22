@@ -3,7 +3,8 @@ import { YOUTUBE_VIDEOS_API } from '../constant'
 import VideoCard from './VideoCard'
 import Shimmer from './Shimmer'
 import { Link } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux'
+import { currentVideoPlaying } from '../utils/appSlice'
 
 function VideoContainer() {
     const [videos, setVideos] = useState([])
@@ -17,6 +18,11 @@ function VideoContainer() {
     useEffect(() => {
         getAllVideos()
     }, []);
+
+    const dispatch = useDispatch();
+    const handleCurrentVideoPlaying = (video) => {
+        dispatch(currentVideoPlaying(video));
+    }
 
     const rows = [];
     for (let i = 0; i < 50; i++) {
@@ -40,7 +46,7 @@ function VideoContainer() {
                 videos.map(video => {
                     return (
                         <div className='w-1/5 p-2 mt-6 cursor-pointer' key={video.id}>
-                            <Link to={`/watch?v=${video.id}`} target="_blank" ><VideoCard info={video} /></Link>
+                            <Link to={`/watch?v=${video.id}`} onClick={() => handleCurrentVideoPlaying(video)} ><VideoCard info={video} /></Link>
                         </div>
                     )
                 })

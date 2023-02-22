@@ -45,7 +45,6 @@ const Head = () => {
                     <div className="inline border-t ml-2 m-[2.5px] w-5 border-whtie"></div>
                     <div className="inline border-t ml-2 m-[2.5px] w-5 border-whtie"></div>
                 </div>
-                {/* <a className='w-24 col-span-5 cursor-pointer' href='/'><img src={logo} alt="youtube logo" /></a> */}
                 <Link to="/" className='w-24 col-span-5 cursor-pointer' href='/'><img src={logo} alt="youtube logo" /></Link>
             </div>
             <div className='col-span-10 h-9 mr-10 flex justify-center border-none'>

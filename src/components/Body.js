@@ -7,7 +7,7 @@ function Body() {
     return (
         <div>
             <Head />
-            <div className='flex bg-[#212121]'>
+            <div className='flex bg-[#0f0f0f]'>
                 <SideBar />
                 <Outlet />
             </div>
@@ -16,3 +16,7 @@ function Body() {
 }
 
 export default Body
+
+
+// #212121
+// #0f0f0f
